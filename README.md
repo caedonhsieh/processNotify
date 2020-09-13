@@ -1,9 +1,9 @@
 # processNotify
-This python3 program runs a process, then notifies the user by SMS using Twilio.
+This program runs a process, then notifies the user by SMS using Twilio.
 
 ## Instructions for setup
-1. Clone this GitHub repository.
-2. If you do not have a Twilio account and Twilio phone number, you will need to set one up here: https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account
+1. If you do not have a Twilio account and Twilio phone number, you will need to set one up here: https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account
+2. Clone this repository and navigate to the project directory.
 3. Run `./setup.sh`. This creates `processNotify.env`, which configures the secure account information, establishes a python virtual environment, installs the requirements in the virtual environment, and sets up run_process.py to use the virtual environment.
 4. Open `processNotify.env` with your favorite text editor, and replace the bracketed sections with your specific information (found here if you log in: https://www.twilio.com/console). A sample `processNotify.env` file may look like:
 ```
@@ -14,8 +14,7 @@ MY_PHONE=+12340000001
 ```
 #### Optional setup
 For Mac users, this allows you to run run_process.py from anywhere.
-1. Type `vim ~/.bash_profile` (or use any text editor), and add export `PATH="$PATH:$HOME/path/to/processNotify"`, using the actual path to this repository.
-2. Type `source ~/.bash_profile`.
+5. From the project directory, type `source set_path.sh`. Warning: moving around the project directory afterwards may break this setup.
 
 ## Instructions for use
 
