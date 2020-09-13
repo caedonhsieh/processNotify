@@ -14,6 +14,7 @@ MY_PHONE=+12340000001
 ```
 #### Optional setup
 For Mac users, this allows you to run run_process.py from anywhere.
+
 5. From the project directory, type `source set_path.sh`. Warning: moving around the project directory afterwards may break this setup.
 
 ## Instructions for use
