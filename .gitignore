@@ -1,0 +1,5 @@
+# python virtual environment
+env
+
+# contains secure account info
+*.env
