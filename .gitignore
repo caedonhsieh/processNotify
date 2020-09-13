@@ -1,2 +1,5 @@
-# environment file containing account info and phone numbers
+# python virtual environment
+env
+
+# contains secure account info
 *.env
