@@ -2,7 +2,7 @@ from twilio.rest import Client
 from settings import load_env
 import os
 
-def send_text(returncode):
+def send_text(args, returncode):
     load_env('processNotify.env')
 
     # Read environment variables
@@ -13,8 +13,16 @@ def send_text(returncode):
 
     client = Client(account_sid, auth_token)
 
+    # Get the first 20 characters of the command for the message
+    max_chars = 20
+    command = ' '.join([str(arg) for arg in args])
+    if len(command) > max_chars:
+        command = command[:max_chars] + "..."
+
     # Depending on return code, process either fails or success
-    message = "Process " + ("succeeded" if returncode == 0 else "failed") + " with return code: " + str(returncode)
+    message = "Process '" + command + "' " + \
+              ("succeeded" if returncode == 0 else "failed") + \
+              " with return code: " + str(returncode)
     client.messages.create(
                          body=message,
                          from_=twilio_phone,

@@ -7,4 +7,4 @@ if num_args > 1:
     # Skip first arg, which should be run_process.py
     command = sys.argv[1:]
     status = subprocess.run(command)
-    send_text(status.returncode)
+    send_text(status.args, status.returncode)
