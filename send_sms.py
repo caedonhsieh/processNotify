@@ -3,7 +3,9 @@ from settings import load_env
 import os
 
 def send_text(args, returncode):
-    load_env('processNotify.env')
+    # Handles relative path issues
+    dirname = os.path.dirname(__file__)
+    load_env(os.path.join(dirname, 'processNotify.env'))
 
     # Read environment variables
     account_sid = os.getenv("TWILIO_ACCOUNT_SID")
