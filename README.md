@@ -21,3 +21,6 @@ MY_PHONE=+12340000001
 ```
 
 ## Instructions for use
+1. If not activated, activate the virtual environment with `source env/bin/activate`.
+2. Run the command: `python3 run_process.py [command]`.
+3. `[command]` can be replaced with any command and its arguments. For example, I could type: `python3 run_process.py ls folder1 folder2`. This would run the command `ls folder1 folder2`, then send a text message when the process has finished.
