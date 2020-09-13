@@ -13,6 +13,7 @@ SHEBANG="#!"
 if [ ${line:0:2} != $SHEBANG ]; then
 	(echo "#! $PWD/env/bin/python3" && cat run_process.py) > temp && mv temp run_process.py
 fi
+chmod +x run_process.py
 
 # initialize processNotify.env
 echo TWILIO_ACCOUNT_SID=[INSERT ACCOUNT SID] > processNotify.env
