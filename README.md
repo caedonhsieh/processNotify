@@ -12,10 +12,7 @@ TWILIO_AUTH_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 TWILIO_PHONE=+12340000000
 MY_PHONE=+12340000001
 ```
-#### Optional setup
-For Mac users, this allows you to run run_process.py from anywhere.
-
-5. From the project directory, type `source set_path.sh`. Warning: moving around the project directory afterwards may break this setup.
+5. (Optional) To allow script to run from anywhere on Mac, type `source set_path.sh`. Warning: moving around the project directory afterwards may break this setup.
 
 ## Instructions for use
 
